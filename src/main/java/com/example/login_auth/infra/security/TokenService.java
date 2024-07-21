@@ -41,7 +41,7 @@ public class TokenService {
                     .withIssuer("login-auth")
                     .build()
                     .verify(token)
-                    .getSignature();
+                    .getSubject();
 
         }catch (JWTVerificationException e){{
             return null;
